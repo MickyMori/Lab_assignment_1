@@ -43,6 +43,7 @@
 #include <sensor_msgs/image_encodings.h>
 #include <std_msgs/Int32.h>
 #include <unistd.h>
+#include <lab_assignment/Marker.h>
 
 class ArucoMarkerPublisher
 {
@@ -56,13 +57,15 @@ private:
   double marker_size_;
   bool useCamInfo_;
   bool start = true;
+  int target;
 
   // ROS pub-sub
   ros::NodeHandle nh_;
   image_transport::ImageTransport it_;
   image_transport::Subscriber image_sub_;
+  ros::Subscriber search_sub;
 
-  ros::Publisher marker_id_pub = nh_.advertise<std_msgs::Int32>("/rosbot/aruco_marker/id", 1000);
+  ros::Publisher marker_pub = nh_.advertise<lab_assignment::Marker>("/rosbot/aruco_marker", 1000);
   //image_transport::Publisher debug_pub_;
 
   cv::Mat inImage_;
@@ -72,11 +75,17 @@ public:
       nh_("~"), it_(nh_), useCamInfo_(true)
   {
     image_sub_ = it_.subscribe("/camera/color/image_raw", 1, &ArucoMarkerPublisher::image_callback, this);
+    search_sub = nh_.subscribe("/rosbot/search_id", 10, &ArucoMarkerPublisher::search_callback, this);
+    
     //image_pub_ = it_.advertise("result", 1);
     //debug_pub_ = it_.advertise("debug", 1);
     
     nh_.param<bool>("use_camera_info", useCamInfo_, false);
     camParam_ = aruco::CameraParameters();
+  }
+  
+  void search_callback(const std_msgs::Int32 target_msg){
+  	target = target_msg.data;
   }
 
   void image_callback(const sensor_msgs::ImageConstPtr& msg)
@@ -98,23 +107,30 @@ public:
       // ok, let's detect
       mDetector_.detect(inImage_, markers_, camParam_, marker_size_, false);
       
-      std_msgs::Int32 mrk_id;
+      lab_assignment::Marker mrk_msg;
       if(start)
       {
-      	sleep(10);
-      	mrk_id.data = -1;
-      	marker_id_pub.publish(mrk_id);
+      	sleep(6);
+      	mrk_msg.id = -1;
+      	marker_pub.publish(mrk_msg);
       	start = false;
       }
 
 		//std::cout << "The id of the detected marker detected is: ";
         for (std::size_t i = 0; i < markers_.size(); ++i)
         {
-        	mrk_id.data = markers_.at(i).id;
-        	marker_id_pub.publish(mrk_id);
-        	//std::cout << markers_.at(i).id << " ";
+        	if(markers_.at(i).id == target){
+			mrk_msg.id = markers_.at(i).id;
+			mrk_msg.center.x = markers_.at(i).getCenter().x;
+			mrk_msg.center.y = markers_.at(i).getCenter().y;
+			mrk_msg.area = markers_.at(i).getArea();
+			marker_pub.publish(mrk_msg);
+			
+			std::cout << "Id " << markers_.at(i).id << std::endl;
+			std::cout << "Area " << markers_.at(i).getArea() << std::endl;
+			std::cout << markers_.at(i).getCenter() << std::endl;
+        	}
         }
-        std::cout << std::endl;
 
       // draw detected markers on the image for visualization
       //for (std::size_t i = 0; i < markers_.size(); ++i)
