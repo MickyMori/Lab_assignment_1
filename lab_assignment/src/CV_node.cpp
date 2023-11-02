@@ -75,7 +75,7 @@ public:
       nh_("~"), it_(nh_), useCamInfo_(true)
   {
     image_sub_ = it_.subscribe("/camera/color/image_raw", 1, &ArucoMarkerPublisher::image_callback, this);
-    search_sub = nh_.subscribe("/rosbot/search_id", 10, &ArucoMarkerPublisher::search_callback, this);
+    search_sub = nh_.subscribe("/rosbot/search_id", 10, &ArucoMarkerPublisher::search_callback, this); //create a sub to get the desired target
     
     //image_pub_ = it_.advertise("result", 1);
     //debug_pub_ = it_.advertise("debug", 1);
@@ -116,7 +116,6 @@ public:
       	start = false;
       }
 
-		//std::cout << "The id of the detected marker detected is: ";
         for (std::size_t i = 0; i < markers_.size(); ++i)
         {
         	if(markers_.at(i).id == target){
