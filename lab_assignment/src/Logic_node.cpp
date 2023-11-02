@@ -44,28 +44,31 @@ public:
 			set_target.data = marker_ids[index];
 			search_id_pub.publish(set_target);
 			move_rosbot(0.0, ang_vel);
-		if(msg.area >= target_area_size){
+		if(msg.id == marker_ids[index] && msg.area >= target_area_size){
+			index++;
 			move_rosbot(-0.4, 0.0);
 			sleep(1);
 			ang_vel = 0.8;
-			index++;
 			set_target.data = marker_ids[index];
 			search_id_pub.publish(set_target);
 			if(marker_ids[index] == 15)
 				flag = false;
 		}	
-		if(msg.center.x < (320 + 10) && msg.center.x > (320 - 10))
+		if(msg.id == marker_ids[index] && msg.center.x < (320 + 10) && msg.center.x > (320 - 10))
 		{
 			move_rosbot(lin_vel, 0.0);
-		}else{
+		}
+		else{
 			move_rosbot(0.0, ang_vel);
 		}
 		
 	}
 	
 	void controller(const lab_assignment::Marker msg){
-		error = img_center - msg.center.x;
-		ang_vel = error * gain;
+		if(msg.id == marker_ids[index]) {
+			error = img_center - msg.center.x;
+			ang_vel = error * gain;
+		}
 	}
 
 	void move_rosbot(double lin_x,double ang_z)
