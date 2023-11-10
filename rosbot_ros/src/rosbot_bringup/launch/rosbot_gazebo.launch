@@ -8,7 +8,7 @@
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
   
   <rosparam command="load" file="$(find rosbot_description)/config/motors_config.yaml" />
-  <node name="controller_spawner" pkg="controller_manager" type="spawner" output="screen" args="joint_state_controller astra_joint_position_controller --shutdown-timeout 3" >
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" output="screen" args="joint_state_controller astra_joint_velocity_controller --shutdown-timeout 3" >
   </node>
 
 </launch>
