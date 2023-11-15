@@ -11,7 +11,7 @@ How to run the simulation
 Start by installing the `xterm` library. This can be done running on terminal the following code:
 
 ```bash
-sudo apt-get install konsole
+sudo apt-get install xterm
 ```
 
 `Note`: xterm is the standard terminal emulator in the Unix-like environment. A user can have multiple xterm sessions started on one or more displays, which provide an input/output system for the processes launched.
