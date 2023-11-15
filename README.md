@@ -1,6 +1,10 @@
 Experimental Robotics Laboratory - First Assignment
 ======================================
 
+Project Description
+-------------------------
+
+
 How to run the simulation
 -------------------------
 
