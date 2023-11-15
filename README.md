@@ -16,15 +16,10 @@ sudo apt-get install konsole
 
 `Note`: xterm is the standard terminal emulator in the Unix-like environment. A user can have multiple xterm sessions started on one or more displays, which provide an input/output system for the processes launched.
 
-You also need to clone a mandatory repository by typing the following command (note that we are using ROS Noetic distro):
+Finally, you can move inside the package and clone our repository and a mandatory one (note that we are using ROS Noetic distro) by typing the command:
 
 ```bash
 git clone https://github.com/husarion/rosbot_ros.git -b noetic
-```
-
-Finally, you can move inside the package and clone the repository by typing the command:
-
-```bash
 git clone https://github.com/MickyMori/Lab_assignment_1.git
 ```
 
