@@ -135,9 +135,14 @@ Simulation
 
 video of the simulation...
 
-environment used...
-
 behaviour explanation...
+
+Implementation on the Real Robot
+-----------------------
+
+video ...
+
+how to connect ...
 
 Code Documentation
 -----------------------
