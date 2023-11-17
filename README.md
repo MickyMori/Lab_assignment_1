@@ -75,7 +75,7 @@ Pseudo Code
 
 Logic_node.cpp
 
-```bash
+```
 Logic Class:
     - Initialize ROS node, publishers, and subscribers.
     - Define marker IDs and necessary variables.
@@ -106,7 +106,7 @@ Main:
 
 CV_node.cpp
 
-```bash
+```
 ArucoMarkerPublisher Class:
     - Initialize ArUco marker detector, ROS node, subscribers, and publishers.
     - Implement image_callback for processing camera feed and marker detection.
