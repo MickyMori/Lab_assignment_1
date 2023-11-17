@@ -8,6 +8,10 @@ Project Description
 
 This project involves controlling a robot's movement based on the detection and interaction with Aruco markers in its environment. The robot navigates through a predefined sequence of markers until it reaches a designated target marker.
 
+talk about rosbot_ros package...
+
+environment(gazebo, rviz, ...) ...
+
 Create and setup a Catkin Workspace
 --------------------------------
 
