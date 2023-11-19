@@ -47,6 +47,8 @@ Flowchart
 
 ![Flowchart of the robot behaviour](Flowchart_rotating.png)
 
+Explanations...?
+
 Pseudocode
 -----------------------
 
