@@ -79,6 +79,9 @@ Flowchart
 
 ![Flowchart of the robot behaviour](Flowchart_fixed.png)
 
+Pseudocode
+-----------------------
+
 Logic_node.cpp
 
 ```
