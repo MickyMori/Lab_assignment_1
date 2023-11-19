@@ -74,8 +74,10 @@ Aruco Marker Publisher Node (CV_node.cpp)
 * Detects Aruco markers in the camera feed.
 * Publishes marker information for the Logic Node to control robot movement.
 
-Pseudo Code
+Flowchart
 -----------------------
+
+![Flowchart of the robot behaviour](flowchart_fixed.png)
 
 Logic_node.cpp
 
