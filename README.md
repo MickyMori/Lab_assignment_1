@@ -42,12 +42,66 @@ imaage ...
 
 explain the software architecture used ...
 
-Flow Chart 
+Flowchart
 -----------------------
 
-image...
+![Flowchart of the robot behaviour](Flowchart_rotating.png)
 
-explanation...
+Pseudocode
+-----------------------
+
+Logic_node.cpp
+
+```
+Logic Class:
+    - Initialize ROS node, publishers, and subscribers.
+    - Define marker IDs and necessary variables.
+    - Implement marker_callback for marker detection.
+    - Implement controller function for orientation correction.
+    - Implement move_rosbot function for robot movement.
+
+marker_callback(msg):
+    - Use controller to correct robot position based on marker info.
+    - Check if target marker is found or needs searching.
+    - Move the robot accordingly:
+        - If target found, proceed to the next marker.
+        - Adjust alignment or rotation if required.
+        - Search for a new marker if not found.
+
+controller(msg):
+    - Calculate error based on marker position.
+    - Adjust angular velocity for orientation correction.
+
+move_rosbot(lin_x, ang_z):
+    - Publish linear and angular velocities to control robot movement.
+
+Main:
+    - Initialize ROS node.
+    - Create an instance of the Logic class.
+    - Enter the ROS spin loop.
+```
+
+CV_node.cpp
+
+```
+ArucoMarkerPublisher Class:
+    - Initialize ArUco marker detector, ROS node, subscribers, and publishers.
+    - Implement image_callback for processing camera feed and marker detection.
+    - Implement search_callback for receiving the target marker ID.
+
+image_callback(msg):
+    - Receive and process the camera feed.
+    - Detect Aruco markers in the image.
+    - Publish marker information for the Logic Node.
+
+search_callback(target_msg):
+    - Receive the desired target marker ID for searching.
+
+Main:
+    - Initialize ROS node.
+    - Create an instance of the ArucoMarkerPublisher class.
+    - Enter the ROS spin loop.
+```
 
 Simulation
 -----------------------
