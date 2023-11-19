@@ -63,6 +63,7 @@ Logic Class:
     - Implement move_rosbot function for robot movement.
 
 marker_callback(msg):
+    - CAMERA
     - Use controller to correct robot position based on marker info.
     - Check if target marker is found or needs searching.
     - Move the robot accordingly:
