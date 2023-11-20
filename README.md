@@ -46,8 +46,7 @@ How to run the simulation
 Move inside the package and clone our repository and a mandatory one (note that we are using ROS Noetic distro) by typing the command:
 
 ```bash
-git clone https://github.com/husarion/rosbot_ros.git -b noetic
-git clone https://github.com/MickyMori/Lab_assignment_1.git
+git clone https://github.com/MickyMori/Lab_assignment_1.git -b rotating_camera
 ```
 
 Then, since inside the source folder there is new content, you need to type the command `catkin_make` inside the ROS workspace folder:
