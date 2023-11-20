@@ -77,7 +77,7 @@ Aruco Marker Publisher Node (CV_node.cpp)
 Flowchart
 -----------------------
 
-![Flowchart of the robot behaviour](Flowchart_fixed.png)
+![Flowchart of the robot behaviour](lab_assignment/media/Flowchart_fixed.png)
 
 Explanations...?
 
