@@ -82,7 +82,7 @@ Aruco Marker Publisher Node (CV_node.cpp)
 Node Graph 
 -----------------------
 
-![](lab_assignment/media/rosgraph_fixed)
+![Rqt Graph](lab_assignment/media/rosgraph_fixed.png)
 
 Simulation
 -----------------------
