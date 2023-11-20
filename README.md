@@ -45,7 +45,7 @@ explain the software architecture used ...
 Flowchart
 -----------------------
 
-![Flowchart of the robot behaviour](Flowchart_rotating.png)
+![Flowchart of the robot behaviour](lab_assignment/media/Flowchart_rotating.png)
 
 Explanations...?
 
