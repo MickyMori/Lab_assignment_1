@@ -79,6 +79,11 @@ Aruco Marker Publisher Node (CV_node.cpp)
 
 ![Flowchart of the robot behaviour](lab_assignment/media/Flowchart_fixed.png)
 
+Node Graph 
+-----------------------
+
+![](lab_assignment/media/rosgraph_fixed)
+
 Simulation
 -----------------------
 
