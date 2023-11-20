@@ -147,7 +147,7 @@ behaviour explanation...
 Implementation on the Real Robot
 -----------------------
 
-[video ...](https://github.com/MickyMori/Lab_assignment_1/blob/c37f374b7aa763d4a7955ec35e42ca4e2f8e2922/lab_assignment/media/fixed_camera.gif)
+https://github.com/MickyMori/Lab_assignment_1/blob/c37f374b7aa763d4a7955ec35e42ca4e2f8e2922/lab_assignment/media/fixed_camera.gif
 
 how to connect ...
 
