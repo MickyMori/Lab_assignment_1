@@ -43,7 +43,7 @@ gedit ~/.bashrc
 How to run the simulation
 -------------------------
 
-Move inside the package and clone our repository and a mandatory one (note that we are using ROS Noetic distro) by typing the command:
+Move inside the package and clone our repository by typing the command:
 
 ```bash
 git clone https://github.com/MickyMori/Lab_assignment_1.git -b rotating_camera
@@ -53,11 +53,11 @@ Then, since inside the source folder there is new content, you need to type the 
 
 ```bash
 cd
-cd <your_workspace>
+cd catkin_ws
 catkin_make
 ```
 
-Open a new tab in the terminal and run the whole project by running the launch file:
+Run the whole project by running the launch file:
 
 ```bash
 roslaunch lab_assignment world.launch
