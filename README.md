@@ -12,6 +12,8 @@ talk about rosbot_ros package...
 
 environment(gazebo, rviz, ...) ...
 
+Note: You can switch the branch from `main` to `rotating_camera` for a slightly different implementation of the project.
+
 Create and setup a Catkin Workspace
 --------------------------------
 
