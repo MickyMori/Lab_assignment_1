@@ -91,12 +91,9 @@ https://github.com/MickyMori/Lab_assignment_1/assets/97695681/9294597b-8b8f-48a0
 Implementation on the Real Robot
 -----------------------
 
+video...
+
 how to connect ...
-
-Code Documentation
------------------------
-
-add generated docs link...
 
 Possible Improvements
 -----------------------
