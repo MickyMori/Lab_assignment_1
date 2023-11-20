@@ -43,12 +43,15 @@ gedit ~/.bashrc
 How to run the simulation
 -------------------------
 
-Move inside the package and clone our repository and a mandatory one (note that we are using ROS Noetic distro) by typing the command:
+Move inside the package and clone our repository, the one containing the markers models and the one used to spawn the Rosbot in the Gazebo environment (note that we are using ROS Noetic distro) by typing the commands:
 
 ```bash
+git clone https://github.com/CarmineD8/aruco_ros.git
 git clone https://github.com/husarion/rosbot_ros.git -b noetic
 git clone https://github.com/MickyMori/Lab_assignment_1.git
 ```
+
+To utilize the marker models, navigate to the hidden `.gazebo` folder located within the root directory. Then, copy the `models` folder from the `aruco_ros` package into the `.gazebo` directory.
 
 Then, since inside the source folder there is new content, you need to type the command `catkin_make` inside the ROS workspace folder:
 
@@ -58,7 +61,7 @@ cd catkin_ws
 catkin_make
 ```
 
-Run the whole project by running the launch file:
+Finally, run the whole project by running the launch file:
 
 ```bash
 roslaunch lab_assignment world.launch
