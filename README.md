@@ -8,7 +8,7 @@ Project Description
 
 This project involves controlling a robot's movement based on the detection and interaction with Aruco markers in its environment. The robot navigates through a predefined sequence of markers until it reaches a designated target marker.
 
-Note: You can switch to the branch `rotating_camera` for a slightly different implementation of the project.
+Note: You can switch to the branch `rotating_camera` for a slightly different implementation of the project. Unfortunately, an implementation on the real robot is possible only with a fixed camera.
 
 Create and setup a Catkin Workspace
 --------------------------------
