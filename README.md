@@ -58,7 +58,7 @@ cd catkin_ws
 catkin_make
 ```
 
-Open a new tab in the terminal and run the whole project by running the launch file:
+Run the whole project by running the launch file:
 
 ```bash
 roslaunch lab_assignment world.launch
