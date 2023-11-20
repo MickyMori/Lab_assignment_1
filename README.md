@@ -12,6 +12,8 @@ talk about rosbot_ros package...
 
 environment(gazebo, rviz, ...) ...
 
+talk about procedure to implement camera controller etc
+
 Create and setup a Catkin Workspace
 --------------------------------
 
