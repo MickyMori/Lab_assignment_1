@@ -51,7 +51,7 @@ git clone https://github.com/husarion/rosbot_ros.git -b noetic
 git clone https://github.com/MickyMori/Lab_assignment_1.git
 ```
 
-To utilize the marker models, navigate to the hidden `.gazebo` folder located within the root directory. Then, copy the `models` folder from the `aruco_ros` package into the `.gazebo` directory.
+At first, to utilize the marker textures, copy the `models` folder from the `aruco_ros` package into `/root/.gazebo/` directory (all new models should be put here, to let the camera work properly).
 
 Then, since inside the source folder there is new content, you need to type the command `catkin_make` inside the ROS workspace folder:
 
