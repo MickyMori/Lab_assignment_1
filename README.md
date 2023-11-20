@@ -147,7 +147,7 @@ behaviour explanation...
 Implementation on the Real Robot
 -----------------------
 
-![Fixed Camera Robot Behaviour](lab_assignment/media/fixed_camera.gif)
+![Fixed Camera Robot Behaviour](lab_assignment/media/fixed_camera.mp4)
 
 how to connect ...
 
