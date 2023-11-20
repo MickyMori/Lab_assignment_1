@@ -109,11 +109,7 @@ Main:
 Simulation
 -----------------------
 
-video of the simulation...
-
-environment used...
-
-behaviour explanation...
+https://github.com/MickyMori/Lab_assignment_1/assets/104144305/4ddfdac8-d989-4ddd-af9c-f3ed96d629f1
 
 Code Documentation
 -----------------------
