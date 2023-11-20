@@ -8,12 +8,6 @@ Project Description
 
 This project involves controlling a robot's movement based on the detection and interaction with Aruco markers in its environment. The robot navigates through a predefined sequence of markers until it reaches a designated target marker.
 
-talk about rosbot_ros package...
-
-environment(gazebo, rviz, ...) ...
-
-talk about procedure to implement camera controller etc
-
 Create and setup a Catkin Workspace
 --------------------------------
 
@@ -43,11 +37,16 @@ gedit ~/.bashrc
 How to run the simulation
 -------------------------
 
-Move inside the package and clone our repository by typing the command:
+Move inside the package and clone our repository and the one containing the markers models by typing the commands:
 
 ```bash
+git clone https://github.com/CarmineD8/aruco_ros.git
 git clone https://github.com/MickyMori/Lab_assignment_1.git -b rotating_camera
 ```
+
+At first, to utilize the marker textures, copy the `models` folder from the `aruco_ros` package into `/root/.gazebo/` directory (all new models should be put here, to let the camera work properly).
+
+... Explanations about camera link etc ...
 
 Then, since inside the source folder there is new content, you need to type the command `catkin_make` inside the ROS workspace folder:
 
@@ -57,7 +56,7 @@ cd catkin_ws
 catkin_make
 ```
 
-Run the whole project by running the launch file:
+Finally, run the whole project by running the launch file:
 
 ```bash
 roslaunch lab_assignment world.launch
