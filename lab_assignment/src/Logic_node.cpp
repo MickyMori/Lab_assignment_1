@@ -68,7 +68,7 @@ public:
 			move_camera(cam_vel);
 		}
 		//if target found -> go next
-		else if(msg.id == marker_ids[index] && msg.area >= target_area_size){
+		else if(msg.area >= target_area_size){
 			index++;
 			move_rosbot(0.0,0.0);
 			if(index == number_of_markers){
