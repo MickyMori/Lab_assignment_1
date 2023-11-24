@@ -17,6 +17,7 @@ const double img_center = 320;
 const double gain = 0.005;
 const double gain_base_cam = 10;
 const double target_area_size = 25000;
+const int number_of_markers = 4;
 double ang_vel = 0.8;
 double cam_vel = 1.0;
 double lin_vel = 0.2;
@@ -36,7 +37,6 @@ private:
 	// Params
 	int marker_ids[4] = {11, 12, 13, 15};
 	int index = 0;
-	bool flag = true;
 	std_msgs::Int32 set_target;
 	// Create a node handle
 	ros::NodeHandle nh;
@@ -64,21 +64,23 @@ public:
 		//search new marker
 		if(msg.id == -1) {
 			set_target.data = marker_ids[index];
-			search_id_pub.publish(set_target); //set target tramite un pub, così ne cerca solo uno, vedi 13 e 15 insieme
+			search_id_pub.publish(set_target);
 			move_camera(cam_vel);
 		}
 		//if target found -> go next
-		else if(msg.id == marker_ids[index] && msg.area >= target_area_size){ //vedi se c'è un modo migliore per farlo anzichè con l'area
+		else if(msg.id == marker_ids[index] && msg.area >= target_area_size){
 			index++;
 			move_rosbot(0.0,0.0);
+			if(index == number_of_markers){
+				ros::shutdown();
+			}
 			cam_vel = 1.0;
-			flag = true;
 			error_base_cam = 1;
 			move_camera(cam_vel);
 			set_target.data = marker_ids[index];
 			search_id_pub.publish(set_target);
 		}
-		//if center -> move forward, else -> correct position	
+		//if marker is in the center of the image align base and camera and then move forward 	
 		else if((msg.center.x < (img_center + 50) && msg.center.x > (img_center - 50)))
 		{
 			move_camera(0.0);
@@ -103,9 +105,7 @@ public:
 			ang_vel = 0.25;
 		else if(ang_vel < -0.25)
 			ang_vel = -0.25;
-		//cout<<"ang vel: "<<ang_vel<<endl;	
 		move_rosbot(0.0, ang_vel);
-		//move_camera(-ang_vel/2);
 	}
 	
 	void link_states_callback(const gazebo_msgs::LinkStates msg){
@@ -131,8 +131,6 @@ public:
 						cam_theta = -(cam_theta-2*M_PI); 
 				}
 				
-				
-				cout<<"cam: "<<endl<<"   x: "<<cam_orientation[0]<<endl<<"   y: "<<cam_orientation[1]<<endl<<"   z: "<<cam_orientation[2]<<endl<<"   theta: "<<cam_theta<<endl;
 				if(found)
 					break;
 				found = true;
@@ -155,7 +153,6 @@ public:
 						base_theta = -(base_theta-2*M_PI); 
 				}
 				
-				cout<<"base: "<<endl<<"   x: "<<base_orientation[0]<<endl<<"   y: "<<base_orientation[1]<<endl<<"   z: "<<base_orientation[2]<<endl<<"   theta: "<<base_theta<<endl;
 				if(found)
 					break;
 				found = true;
@@ -173,7 +170,6 @@ public:
 				cam_vel = 1.5;
 			}else if(cam_vel<-1.5)
 				cam_vel = -1.5;
-			//cout<<"cam vel: "<<cam_vel<<endl;
 		}
 	}
 
