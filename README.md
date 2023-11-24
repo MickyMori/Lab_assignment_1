@@ -17,7 +17,7 @@ The IDs of the markers have specific meanings:
 
 Notice that “reach marker xxx” means that one side of the xxx marker must be at least 170 pixels in the camera frame.
 
-`Note:` You can switch to the branch `rotating_camera` for a slightly different implementation of the project. Unfortunately, the implementation on the real robot is possible only with a fixed camera.
+`Note:` The README for the `rotating_camera` branch contains details about a slightly different implementation for the project. However, it's important to note that the actual implementation on the real robot can only be achieved using a fixed camera.
 
 Create and setup a Catkin Workspace
 --------------------------------
