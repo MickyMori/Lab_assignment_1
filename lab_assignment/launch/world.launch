@@ -15,7 +15,8 @@
   </include>
   <include file="$(find rosbot_bringup)/launch/rosbot_gazebo.launch"/>
   
-  <node pkg="lab_assignment" type="CV_node" name="CV_node" launch-prefix="xterm -hold -e"/>
-  <node pkg="lab_assignment" type="Logic_node" name="Logic_node" launch-prefix="xterm -hold -e"/>
+  <node pkg="lab_assignment" type="CV_node" name="CV_node"/>
+  <node pkg="lab_assignment" type="Logic_node" name="Logic_node" launch-prefix="konsole -e"/>
+  <node pkg="image_view" type="image_view" name="image_view" args="/image:=CV_node/result"/>
 
 </launch>

@@ -14,7 +14,8 @@
 // Constants for image processing and control
 const double img_center = 320; /**< Horizontal center of the image. */
 const double gain = 0.01; /**< Proportional gain for the controller. */
-const double target_area_size = 200 * 200; /**< Target area size for marker detection. */
+const double target_area_size = 24000; /**< Target area size for marker detection. */
+const int number_of_markers = 4; /**< Numer of markers present in the environment */
 double ang_vel = 0.8; /**< Angular velocity for robot movement. */
 double lin_vel = 0.2; /**< Linear velocity for robot movement. */
 double error; /**< Error for the proportional controller. */
@@ -61,7 +62,6 @@ public:
     {
         // Use the controller to correct the position of the robot
         controller(msg);
-        std::cout << marker_ids[index] << std::endl;
 
         // Search for a new marker
         if (msg.id == -1)
@@ -71,17 +71,22 @@ public:
             move_rosbot(0.0, ang_vel);
         }
         // If target found, go to the next one
-        else if (msg.id == marker_ids[index] && msg.area >= target_area_size)
+        else if (msg.area >= target_area_size)
         {
             index++;
-            move_rosbot(-0.4, 0.0);
-            sleep(1);
+            //if the rosbot found all the markers shutdown this node
+            if(index == number_of_markers)
+            {
+            	move_rosbot(0.0, 0.0);
+            	ros::shutdown();
+            }
             ang_vel = 0.8;
+            move_rosbot(0.0, ang_vel);
             set_target.data = marker_ids[index];
             search_id_pub.publish(set_target);
         }
         // If the center is aligned, move forward; else, correct position
-        else if (msg.id == marker_ids[index] && msg.center.x < (320 + 10) && msg.center.x > (320 - 10))
+        else if (msg.center.x < (320 + 10) && msg.center.x > (320 - 10))
         {
             move_rosbot(lin_vel, 0.0);
         }
@@ -131,8 +136,6 @@ int main(int argc, char **argv)
 {
     // Initialize the ROS node
     ros::init(argc, argv, "logic_node");
-    std::cout << "Logic node starting";
-    std::flush(std::cout);
 
     // Create an instance of the Logic class
     Logic node;
