@@ -6,7 +6,7 @@ Aruco Marker Robot Navigation
 Project Description
 -------------------------
 
-This project involves controlling a robot's movement based on the detection and interaction with Aruco markers in its environment. The robot navigates through a predefined sequence of markers until it reaches a given target marker. The implementation is done in ROS Noetic, both in simulation using the Gazebo environment and with an implementation on the real robot ([ROSbot](https://husarion.com/)).
+This project involves controlling a robot's movement based on the detection and interaction with Aruco markers in its environment. The robot navigates through a predefined sequence of markers until it reaches a given target marker. The implementation is done in `ROS Noetic`, both in simulation using the Gazebo environment and with an implementation on the real robot ([ROSbot](https://husarion.com/)).
 
 The IDs of the markers have specific meanings:
 
@@ -14,10 +14,10 @@ The IDs of the markers have specific meanings:
 * Marker 12 instructs the robot to rotate until it finds marker 13, then reaches it;
 * Marker 13 instructs the robot to rotate until it finds marker 15, then reaches it;
 * Once marker 15 is found, the robot stops as it has completed its tasks.
-* 
+
 Notice that “reach marker xxx” means that one side of the xxx marker must be at least 170 pixels in the camera frame.
 
-Note: You can switch to the branch `rotating_camera` for a slightly different implementation of the project. Unfortunately, an implementation on the real robot is possible only with a fixed camera.
+`Note:` You can switch to the branch `rotating_camera` for a slightly different implementation of the project. Unfortunately, the implementation on the real robot is possible only with a fixed camera.
 
 Create and setup a Catkin Workspace
 --------------------------------
