@@ -110,9 +110,9 @@ https://github.com/MickyMori/Lab_assignment_1/assets/104144305/29c77bec-d354-402
 Implementation on the Real Robot
 -----------------------
 
-video...
+Here we can observe the implementation on the real robot **ROSBOT 2**
 
-how to connect ...
+https://github.com/MickyMori/Lab_assignment_1/assets/104144305/a2811336-e8a1-4c70-9dba-bae365873d28
 
 Possible Improvements
 -----------------------
