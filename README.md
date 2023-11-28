@@ -1,6 +1,9 @@
 Experimental Robotics Laboratory - First Assignment
 ======================================
 
+Participants
+-------------------------
+
 Moriconi Michele 4861803 <br>
 Rocca Giovanni 4802954 <br>
 Cappellini Matteo 4822622 <br>
