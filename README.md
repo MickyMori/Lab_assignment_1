@@ -94,7 +94,6 @@ Node Graph
 
 ![Rqt Graph](lab_assignment/media/rosgraph_rot.png)
 
-
 Simulation
 -----------------------
 
