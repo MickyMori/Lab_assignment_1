@@ -109,8 +109,8 @@ https://github.com/MickyMori/Lab_assignment_1/assets/104144305/a2811336-e8a1-4c7
 Team Members
 -------------
 
-|    |Name |Surname | ID |
-|----|---|---|
+|    |Name |Surname |ID |
+|----|---|---|---|
 | 1 | Michele | Moriconi | S4861803 |
 | 2 | Giovanni | Rocca | S4802954 |
 | 3 | Matteo | Cappellini | S4822622 |
