@@ -98,10 +98,12 @@ Node Graph
 Simulation
 -----------------------
 
+Here is the simulated behaviour of the robot, sped up to present a better flow of the video.
+
 https://github.com/MickyMori/Lab_assignment_1/assets/104144305/4ddfdac8-d989-4ddd-af9c-f3ed96d629f1
 
 Possible Improvements
 -----------------------
 
 * Implement a more sophisticated navigation algorithm for smoother movement between markers.
-* Enhance error handling and recovery mechanisms for better resilience in marker detection scenarios.
+* Enhance error handling and recovery mechanisms for better resilience in marker detection scenarios, since the robot can sometimes struggle with the marker recognition.
