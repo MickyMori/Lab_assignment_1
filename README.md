@@ -105,7 +105,7 @@ Node Graph
 Simulation
 -----------------------
 
-https://github.com/MickyMori/Lab_assignment_1/assets/97695681/9294597b-8b8f-48a0-9cf0-01bb81cce03f
+https://github.com/MickyMori/Lab_assignment_1/assets/104144305/29c77bec-d354-4027-9b30-6a5baf27b63d
 
 Implementation on the Real Robot
 -----------------------
