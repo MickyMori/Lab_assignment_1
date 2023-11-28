@@ -16,7 +16,7 @@ Aruco Marker Robot Navigation
 Project Description
 -------------------------
 
-This project involves controlling a robot's movement based on the detection and interaction with Aruco markers in its environment. The robot navigates through a predefined sequence of markers until it reaches a designated target marker.
+This project involves controlling a robot's movement based on the detection and interaction with Aruco markers in its environment. The robot navigates through a predefined sequence of markers until it reaches the end. The implementation for the code in this branch is only done in simulation using the Gazebo environment.
 
 Create and setup a Catkin Workspace
 --------------------------------
@@ -54,11 +54,11 @@ git clone https://github.com/CarmineD8/aruco_ros.git
 git clone https://github.com/MickyMori/Lab_assignment_1.git -b rotating_camera
 ```
 
-At first, to utilize the marker textures, copy the `models` folder from the `aruco_ros` package into `/root/.gazebo/` directory (all new models should be put here, to let the camera work properly).
+At first, to utilize the marker textures, copy the `models` folder from the `aruco_ros` package into `/root/.gazebo/models` directory (all new models should be put here, to let the camera work properly).
 
 In order to be able to control the camera link we had to modify the `rosbot_ros` package by adding the `motors_config.yaml` file inside the directory `rosbot_ros/src/rosbot_description/config` and modify the launch file accordingly.
 
-Then, since inside the source folder there is new content, you need to type the command `catkin_make` inside the ROS workspace folder:
+Then, since inside the source folder there is new content, it is needed to type the command `catkin_make` inside the ROS workspace folder:
 
 ```bash
 cd
@@ -79,7 +79,7 @@ Logic Node (Logic_node.cpp)
 * Subscribes to Aruco marker messages.
 * Controls the camera in order to find a new target.
 * When a target is found, aligns the base frame with the camera's orientation.
-* Controls the robot's movement based on marker detection.
+* Move the robot towards the target.
 * Publishes velocity commands and marker IDs for searching.
 
 Aruco Marker Publisher Node (CV_node.cpp)
