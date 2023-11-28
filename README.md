@@ -59,11 +59,10 @@ gedit ~/.bashrc
 How to run the simulation
 -------------------------
 
-Move inside the package and clone our repository, the one containing the markers models and the one used to spawn the Rosbot in the Gazebo environment (note that we are using ROS Noetic distro) by typing the commands:
+Move inside the package and clone our repository and the one containing the markers models by typing the commands:
 
 ```bash
 git clone https://github.com/CarmineD8/aruco_ros.git
-git clone https://github.com/husarion/rosbot_ros.git -b noetic
 git clone https://github.com/MickyMori/Lab_assignment_1.git
 ```
 
