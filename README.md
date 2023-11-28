@@ -118,6 +118,6 @@ Possible Improvements
 -----------------------
 
 * Implement a more sophisticated navigation algorithm for smoother movement between markers.
-* Enhance error handling and recovery mechanisms for better resilience in marker detection scenarios.
+* Enhance error handling and recovery mechanisms for better resilience in marker detection scenarios, since the robot can struggle with the marker recognition.
 
 
