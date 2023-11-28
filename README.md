@@ -105,6 +105,8 @@ Node Graph
 Simulation
 -----------------------
 
+Here is the simulated behaviour of the robot, sped up to present a better flow of the video.
+
 https://github.com/MickyMori/Lab_assignment_1/assets/104144305/29c77bec-d354-4027-9b30-6a5baf27b63d
 
 Implementation on the Real Robot
