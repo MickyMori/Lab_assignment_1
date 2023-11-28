@@ -56,7 +56,7 @@ git clone https://github.com/MickyMori/Lab_assignment_1.git -b rotating_camera
 
 At first, to utilize the marker textures, copy the `models` folder from the `aruco_ros` package into `/root/.gazebo/` directory (all new models should be put here, to let the camera work properly).
 
-... Explanations about camera link etc ...
+In order to be able to control the camera link we had to modify the `rosbot_ros` package by adding the `motors_config.yaml` file inside the directory `rosbot_ros/src/rosbot_description/config` and modify the launch file accordingly.
 
 Then, since inside the source folder there is new content, you need to type the command `catkin_make` inside the ROS workspace folder:
 
