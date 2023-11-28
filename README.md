@@ -4,11 +4,11 @@ Experimental Robotics Laboratory - First Assignment
 Participants
 -------------------------
 
-Moriconi Michele 4861803 <br>
-Rocca Giovanni 4802954 <br>
-Cappellini Matteo 4822622 <br>
-Delucchi Manuel 4803977 <br>
-Bolla Andrea 4482930
+Moriconi Michele **S4861803** <br>
+Rocca Giovanni **S4802954** <br>
+Cappellini Matteo **S4822622** <br>
+Delucchi Manuel **S4803977** <br>
+Bolla Andrea **S4482930**
 
 Aruco Marker Robot Navigation
 ======================================
