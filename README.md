@@ -19,6 +19,17 @@ Notice that “reach marker xxx” means that one side of the xxx marker must be
 
 `Note:` The README for the `rotating_camera` branch contains details about a slightly different implementation for the project. However, it's important to note that the actual implementation on the real robot can only be achieved using a fixed camera.
 
+Team Members
+-------------
+
+|    |Name |Surname |ID |
+|----|---|---|---|
+| 1 | Michele | Moriconi | S4861803 |
+| 2 | Giovanni | Rocca | S4802954 |
+| 3 | Matteo | Cappellini | S4822622 |
+| 4 | Manuel | Delucchi | S4803977 |
+| 5 | Andrea | Bolla | S4482930 |
+
 Create and setup a Catkin Workspace
 --------------------------------
 
@@ -105,17 +116,6 @@ Implementation on the Real Robot
 Here we can observe the implementation on the real robot **ROSBOT 2**
 
 https://github.com/MickyMori/Lab_assignment_1/assets/104144305/a2811336-e8a1-4c70-9dba-bae365873d28
-
-Team Members
--------------
-
-|    |Name |Surname |ID |
-|----|---|---|---|
-| 1 | Michele | Moriconi | S4861803 |
-| 2 | Giovanni | Rocca | S4802954 |
-| 3 | Matteo | Cappellini | S4822622 |
-| 4 | Manuel | Delucchi | S4803977 |
-| 5 | Andrea | Bolla | S4482930 |
 
 Possible Improvements
 -----------------------
