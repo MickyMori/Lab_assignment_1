@@ -1,15 +1,5 @@
 Experimental Robotics Laboratory - First Assignment
 ======================================
-
-Participants
--------------------------
-
-Moriconi Michele **S4861803** <br>
-Rocca Giovanni **S4802954** <br>
-Cappellini Matteo **S4822622** <br>
-Delucchi Manuel **S4803977** <br>
-Bolla Andrea **S4482930**
-
 Aruco Marker Robot Navigation
 ======================================
 
@@ -26,6 +16,18 @@ The IDs of the markers have specific meanings:
 * Once marker 15 is found, the robot stops as it has completed its tasks.
 
 Notice that “reach marker xxx” means that one side of the xxx marker must be at least 170 pixels in the camera frame.
+
+Team Members
+-------------
+
+|    |Name |Surname |ID |
+|----|---|---|---|
+| 1 | Michele | Moriconi | S4861803 |
+| 2 | Giovanni | Rocca | S4802954 |
+| 3 | Matteo | Cappellini | S4822622 |
+| 4 | Manuel | Delucchi | S4803977 |
+| 5 | Andrea | Bolla | S4482930 |
+
 
 Create and setup a Catkin Workspace
 --------------------------------
