@@ -16,7 +16,7 @@ Aruco Marker Robot Navigation
 Project Description
 -------------------------
 
-This project involves controlling a robot's movement based on the detection and interaction with Aruco markers in its environment. The robot navigates through a predefined sequence of markers until it reaches a given target marker. The implementation is done in `ROS Noetic`, both in simulation using the Gazebo environment and with an implementation on the real robot ([ROSbot](https://husarion.com/)).
+This project involves controlling a robot's movement based on the detection and interaction with Aruco markers in its environment. The robot navigates through a predefined sequence of markers until it reaches the end. The implementation is done in `ROS Noetic`, both in simulation using the Gazebo environment and with an implementation on the real robot ([ROSbot](https://husarion.com/)).
 
 The IDs of the markers have specific meanings:
 
@@ -66,7 +66,7 @@ git clone https://github.com/husarion/rosbot_ros.git -b noetic
 git clone https://github.com/MickyMori/Lab_assignment_1.git
 ```
 
-At first, to utilize the marker textures, copy the `models` folder from the `aruco_ros` package into `/root/.gazebo/` directory (all new models should be put here, to let the camera work properly).
+At first, to utilize the marker textures, copy the `models` folder from the `aruco_ros` package into `/root/.gazebo/models` directory (all new models should be put here, to let the camera work properly).
 
 Then, since inside the source folder there is new content, you need to type the command `catkin_make` inside the ROS workspace folder:
 
