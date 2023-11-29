@@ -114,7 +114,7 @@ Implementation on the Real Robot
 
 Here we can observe the implementation on the real robot **ROSBOT 2**
 
-https://github.com/MickyMori/Lab_assignment_1/blob/1697d9baefa878eebfe003f4c5cb1582c1d8ac77/lab_assignment/media/real_robot.mp4
+https://github.com/MickyMori/Lab_assignment_1/blob/1697d9baefa878eebfe003f4c5cb1582c1d8ac77
 
 Possible Improvements
 -----------------------
