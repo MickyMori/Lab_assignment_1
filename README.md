@@ -15,7 +15,7 @@ The IDs of the markers have specific meanings:
 * Marker 13 instructs the robot to rotate until it finds marker 15, then reaches it;
 * Once marker 15 is found, the robot stops as it has completed its tasks.
 
-Notice that “reach marker xxx” means that one side of the xxx marker must be at least 170 pixels in the camera frame.
+Notice that 'reach marker xxx' means that one side of the xxx marker must be greater than a certain pixel threshold in the camera frame.
 
 `Note:` The README for the `rotating_camera` branch contains details about a slightly different implementation for the project. However, it's important to note that the actual implementation on the real robot can only be achieved using a fixed camera.
 
