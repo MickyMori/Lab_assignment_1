@@ -15,7 +15,7 @@ The IDs of the markers have specific meanings:
 * Marker 13 instructs the robot to rotate until it finds marker 15, then reaches it;
 * Once marker 15 is found, the robot stops as it has completed its tasks.
 
-Notice that “reach marker xxx” means that one side of the xxx marker must be at least 170 pixels in the camera frame. 
+Notice that 'reach marker xxx' means that one side of the xxx marker must be greater than a certain pixel threshold in the camera frame.
 
 Team Members
 -------------
