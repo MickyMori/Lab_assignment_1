@@ -1,12 +1,12 @@
-Experimental Robotics Laboratory - First Assignment
+Experimental Robotics Laboratory 🤖
 ======================================
 Aruco Marker Robot Navigation
 ======================================
 
-Project Description
+Project Description 📎
 -------------------------
 
-This project involves controlling a robot's movement based on the detection and interaction with Aruco markers in its environment. The robot navigates through a predefined sequence of markers until it reaches the end. The implementation is done in `ROS Noetic`, both in simulation using the Gazebo environment and with an implementation on the real robot ([ROSbot](https://husarion.com/)).
+This project involves controlling a robot's movement based on the detection and interaction with Aruco markers in its environment. The robot navigates through a predefined sequence of markers until it reaches the end. The implementation is done in `ROS Noetic`, both in simulation using the Gazebo environment and with an implementation on the real robot ([ROSbot](https://husarion.com/manuals/rosbot/)).
 
 The IDs of the markers have specific meanings:
 
@@ -19,7 +19,7 @@ Notice that 'reach marker xxx' means that one side of the xxx marker must be gre
 
 `Note:` The README for the `rotating_camera` branch contains details about a slightly different implementation for the project. However, it's important to note that the actual implementation on the real robot can only be achieved using a fixed camera.
 
-Team Members
+Team Members 👨‍🔬
 -------------
 
 |    |Name |Surname |ID |
@@ -30,7 +30,7 @@ Team Members
 | 4 | Manuel | Delucchi | S4803977 |
 | 5 | Andrea | Bolla | S4482930 |
 
-Create and setup a Catkin Workspace
+Create and setup a Catkin Workspace 🧰
 --------------------------------
 
 A catkin (ROS) workspace is a directory in which you can create or modify existing catkin packages. We will label our catkin workspace `catkin_ws`. To create the catkin workspace, type the following commands in the Terminal:
@@ -56,7 +56,7 @@ Remember to add this source command to your `.bashrc` file under the source line
 gedit ~/.bashrc
 ```
 
-How to run the simulation
+How to run the simulation ⌨️
 -------------------------
 
 Move inside the package and clone our repository and the one containing the markers models by typing the commands:
@@ -82,41 +82,41 @@ Finally, run the whole project by running the launch file:
 roslaunch lab_assignment world.launch
 ```
 
-Flowchart
+Flowchart 🎞️
 -----------------------
 
-Logic Node (Logic_node.cpp)
+`Logic Node` (Logic_node.cpp)
 * Subscribes to Aruco marker messages.
 * Controls the robot's movement based on marker detection.
 * Publishes velocity commands and marker IDs for searching.
 
-Aruco Marker Publisher Node (CV_node.cpp)
+`Aruco Marker Publisher Node` (CV_node.cpp)
 * Subscribes to target and camera feed messages.
 * Detects Aruco markers by processing them.
 * Publishes marker information for the Logic Node to control robot movement.
 
 ![Flowchart of the robot behaviour](lab_assignment/media/Flowchart_fixed_Camera.png)
 
-Node Graph 
+Node Graph 🔖
 -----------------------
 
 ![Rqt Graph](lab_assignment/media/rosgraph_fixed.png)
 
-Simulation
+Simulation 💻
 -----------------------
 
 Here is the simulated behaviour of the robot, sped up to present a better flow of the video.
 
 https://github.com/MickyMori/Lab_assignment_1/assets/104144305/29c77bec-d354-4027-9b30-6a5baf27b63d
 
-Implementation on the Real Robot
+Implementation on the Real Robot 🚗
 -----------------------
 
-Here we can observe the implementation on the real robot **ROSBOT 2**
+You can explore the live implementation on the **ROSbot 2** real robot by following this guide to connect and upload the program directly onto the robot. Here's the link -> [ROSbot 2 - quick start](https://husarion.com/tutorials/howtostart/rosbot---quick-start/)
 
 https://github.com/MickyMori/Lab_assignment_1/assets/97695681/a7ebad9f-b36e-41ab-a47f-61f6880f1ad1
 
-Possible Improvements
+Possible Improvements 🏷️
 -----------------------
 
 * Implement a more sophisticated navigation algorithm for smoother movement between markers.
