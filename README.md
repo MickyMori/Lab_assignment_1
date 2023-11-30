@@ -1,12 +1,12 @@
-Experimental Robotics Laboratory - First Assignment
+Experimental Robotics Laboratory 🤖
 ======================================
 Aruco Marker Robot Navigation
 ======================================
 
-Project Description
+Project Description 📎
 -------------------------
 
-This project involves controlling a robot's and camera's movement based on the detection and interaction with Aruco markers in its environment. The robot navigates through a predefined sequence of markers until it reaches the end. The implementation is done in `ROS Noetic`, both in simulation using the Gazebo environment and with an implementation on the real robot ([ROSbot](https://husarion.com/)).
+This project involves controlling a robot's and camera's movement based on the detection and interaction with Aruco markers in its environment. The robot navigates through a predefined sequence of markers until it reaches the end. The implementation is done in `ROS Noetic`, both in simulation using the Gazebo environment and with an implementation on the real robot ([ROSbot](https://husarion.com/manuals/rosbot/)).
 
 The IDs of the markers have specific meanings:
 
@@ -17,7 +17,7 @@ The IDs of the markers have specific meanings:
 
 Notice that 'reach marker xxx' means that one side of the xxx marker must be greater than a certain pixel threshold in the camera frame.
 
-Team Members
+Team Members 👨‍🔬
 -------------
 
 |    |Name |Surname |ID |
@@ -29,7 +29,7 @@ Team Members
 | 5 | Andrea | Bolla | S4482930 |
 
 
-Create and setup a Catkin Workspace
+Create and setup a Catkin Workspace 🧰
 --------------------------------
 
 A catkin (ROS) workspace is a directory in which you can create or modify existing catkin packages. We will label our catkin workspace `catkin_ws`. To create the catkin workspace, type the following commands in the Terminal:
@@ -55,7 +55,7 @@ Remember to add this source command to your `.bashrc` file under the source line
 gedit ~/.bashrc
 ```
 
-How to run the simulation
+How to run the simulation ⌨️
 -------------------------
 
 Move inside the package and clone our repository and the one containing the markers models by typing the commands:
@@ -83,7 +83,7 @@ Finally, run the whole project by running the launch file:
 roslaunch lab_assignment world.launch
 ```
 
-Flowchart
+Flowchart 🎞️
 -----------------------
 
 Logic Node (Logic_node.cpp)
@@ -100,12 +100,12 @@ Aruco Marker Publisher Node (CV_node.cpp)
 
 ![Flowchart of the robot behaviour](lab_assignment/media/Flowchart_rotating_Camera.png)
 
-Node Graph
+Node Graph 🔖
 -----------------------
 
 ![Rqt Graph](lab_assignment/media/rosgraph_rot.png)
 
-Simulation
+Simulation 💻
 -----------------------
 
 Here is the simulated behaviour of the robot, sped up to present a better flow of the video.
